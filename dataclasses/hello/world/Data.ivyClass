@@ -1,0 +1,8 @@
+Data #class
+hello.world #namespace
+firstname String #field
+firstname PERSISTENT #fieldModifier
+lastname String #field
+lastname PERSISTENT #fieldModifier
+message String #field
+message PERSISTENT #fieldModifier

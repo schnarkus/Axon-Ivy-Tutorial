@@ -1,0 +1,4 @@
+OutputData #class
+hello.world.Output #namespace
+data hello.world.Data #field
+data PERSISTENT #fieldModifier
