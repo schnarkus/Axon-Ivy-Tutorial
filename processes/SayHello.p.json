@@ -49,7 +49,7 @@
       "visual": {
         "at": { "x": 296, "y": 72 }
       },
-      "connect": { "id": "f4", "to": "f3" }
+      "connect": { "id": "f4", "to": "f8" }
     },
     {
       "id": "f3",
@@ -57,7 +57,7 @@
       "name": "Output",
       "config": {
         "dialogId": "hello.world.Output",
-        "startMethod": "start()",
+        "startMethod": "start(hello.world.Data)",
         "call": {
           "params": [{ "name": "data", "type": "hello.world.Data" }],
           "map": {
@@ -75,6 +75,33 @@
         "at": { "x": 496, "y": 72 }
       },
       "connect": { "id": "f5", "to": "f1" }
+    },
+    {
+      "id": "f8",
+      "type": "Script",
+      "name": "Persist Data",
+      "config": {
+        "output": {
+          "code": [
+            "import hello.world.DataEntity;",
+            "// Map dialog Data (process data `out`) to persistent entity and persist it",
+            "if (out != null) {",
+            "  DataEntity e = new DataEntity();",
+            "  // Map fields (use getters provided by the generated Data class).",
+            "  e.setFirstname(out.getFirstname());",
+            "  e.setLastname(out.getLastname());",
+            "  e.setMessage(out.getMessage());",
+            "  ivy.log.info(\"[SayHello] persisting entity...\");",
+            "  Object persisted = ivy.persistence.helloworld.persist(e);",
+            "  ivy.log.info(\"[SayHello] persisted entity: \" + persisted);",
+            "}"
+          ]
+        }
+      },
+      "visual": {
+        "at": { "x": 392, "y": 176 }
+      },
+      "connect": { "id": "f9", "to": "f3" }
     }
   ]
 }
