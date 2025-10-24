@@ -1,0 +1,4 @@
+Person #class
+hello.world #namespace
+firstname String #field
+lastname String #field

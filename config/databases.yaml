@@ -1,1 +1,6 @@
 Databases:
+  helloworld_db:
+    Url: jdbc:postgresql://localhost:5432/axonivy_systemdb
+    Driver: org.postgresql.Driver
+    UserName: ivy_user
+    Password: ${decrypt:\u0013\u0028\u0065\u00E4\u00ED\u0009\u0016\u0052\u005F\u003E\u0042\u00E5\u009D\u002A\u002D\u001E\u0043\u007B\u00E8\u008C\u00C7\u0081\u00CB\u007C\u00D0\u001D\u0046\u006F\u0039\u0073\u000C\u008F\u0052\u0066\u00F9\u0062\u00C6\u005B\u0081\u0099\u00CC\u004A\u0044\u000E\u0006\u00CC\u0009\u0014}
